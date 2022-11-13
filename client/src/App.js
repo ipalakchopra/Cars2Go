@@ -7,9 +7,6 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import BookingCar from './pages/BookingCar'
 
-
-
-
 function App() {
   return (
     <div className="App">
