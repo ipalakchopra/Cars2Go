@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 function connectDB(){
     mongoose.connect('mongodb+srv://carrental:carrental@cluster0.ngjra87.mongodb.net/cars2go' , {useUnifiedTopology: true , useNewUrlParser: true})
