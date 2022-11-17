@@ -8,27 +8,26 @@ function Home() {
   const {cars} = useSelector(state=>state.carsReducer)
   const {loading} = useSelector(state=>state.alertsReducer)
   const dispatch = useDispatch()
-
+  
   useEffect(() =>{
       dispatch(getAllCars())
   } ,[dispatch])
 
   return (
     <DefaultLayout>
-
         {loading == true && (<Spinner/>)}
-
+        
         <Row justify='center' gutter={16} className='mt-5'>
           {cars.map(car=>{
-            return <col lg={5} sm={24} xs={24}>
+            return <Col lg={5} sm={24} xs={24}>
               <div className="car p-2 bs1">
-                <img src={car.image} className="carimg"/>
+                <img src={car.image} className="carimg" alt="car"/>
                 <div className="car-content d-flex align-items-center justify-content-between">
 
-                  <di>
+                  <div>
                     <p>{car.name}</p>
                     <p>{car.rentPerHour} Rent Per Hour /-</p>
-                  </di>
+                  </div>
 
                   <div>
                     <button className="btn1 mr-2">Book Now</button>
@@ -36,7 +35,7 @@ function Home() {
 
                 </div>
               </div>
-            </col>
+            </Col>
           })}
         </Row>
     </DefaultLayout>
