@@ -4,6 +4,8 @@ import DefaultLayout from '../components/DefaultLayout';
 import { getAllCars } from '../redux/actions/carsActions';
 import { Button, Row, Col} from 'antd';
 import Spinner from '../components/Spinner';
+
+
 function Home() {
   const {cars} = useSelector(state=>state.carsReducer)
   const {loading} = useSelector(state=>state.alertsReducer)
@@ -38,6 +40,7 @@ function Home() {
             </Col>
           })}
         </Row>
+        
     </DefaultLayout>
   );
 }
