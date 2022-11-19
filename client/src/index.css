@@ -48,6 +48,14 @@ button{
   padding: 10px;
   
 }
+.header .ant-btn{
+  box-shadow: none !important;
+  background-color: white !important;
+  color: orangered !important;
+  border: 1px solid orangered !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+}
 .content{
   min-height: 90vh;
   
