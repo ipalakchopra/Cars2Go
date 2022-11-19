@@ -4,30 +4,21 @@ import {Link} from 'react-router-dom'
 
 function DefaultLayout(props) {
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
   const menu = (
     <Menu>
-        <Menu.Item>
-        <a
-         
-          href="/"
-        >
+      <Menu.Item>
+        <a href="/">
           Home
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a
-          
-          href="/userbookings"
-        >
+        <a href="/userbookings">
           Bookings
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a
-         
-          href="/admin"
-        >
+        <a href="/admin">
           Admin
         </a>
       </Menu.Item>
@@ -39,7 +30,9 @@ function DefaultLayout(props) {
       </Menu.Item>
     </Menu>
   );
+  
   return (
+    
     <div>
       <div className="header bs1">
           <Row gutter={16} justify='center'>
@@ -48,7 +41,7 @@ function DefaultLayout(props) {
              <h1 ><b><Link to='/' style={{color:'orangered'}}>Cars2Go</Link></b></h1>
 
           <Dropdown overlay={menu} placement="bottomCenter">
-            <Button>{user.username}</Button>
+            <Button>{user[0].username}</Button>
           </Dropdown>
         </div>
               </Col>

@@ -7,6 +7,8 @@ import Spinner from '../components/Spinner';
 
 
 function Home() {
+  const user = JSON.parse(localStorage.getItem('user'));
+
   const {cars} = useSelector(state=>state.carsReducer)
   const {loading} = useSelector(state=>state.alertsReducer)
   const dispatch = useDispatch()
@@ -18,7 +20,7 @@ function Home() {
   return (
     <DefaultLayout>
         {loading == true && (<Spinner/>)}
-        
+        <h1>{user.username}</h1>
         <Row justify='center' gutter={16} className='mt-5'>
           {cars.map(car=>{
             return <Col lg={5} sm={24} xs={24}>
