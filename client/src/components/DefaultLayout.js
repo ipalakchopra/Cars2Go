@@ -1,56 +1,63 @@
-import React, {useState, useEffect} from "react";
-import { Menu, Dropdown, Button, Space, Row, Col } from "antd";
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Menu, Dropdown, Button, Space , Row , Col } from "antd";
+import {Link} from 'react-router-dom'
 
 function DefaultLayout(props) {
-  const [user, setuser] = useState(JSON.parse(localStorage.getItem('user')))
-  console.log("first")
+    const user = JSON.parse(localStorage.getItem('user'));
 
-  console.log(user.username)
   const menu = (
     <Menu>
-      <Menu.Item>
-        <a href="/" >
+        <Menu.Item>
+        <a
+         
+          href="/"
+        >
           Home
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/userbookings">
+        <a
+          
+          href="/userbookings"
+        >
           Bookings
         </a>
       </Menu.Item>
       <Menu.Item>
-        <a href="/admin">
-          Profile
+        <a
+         
+          href="/admin"
+        >
+          Admin
         </a>
       </Menu.Item>
-      <Menu.Item onClick={() => {
-        localStorage.removeItem('user');
-        window.location.href = '/login'
+      <Menu.Item onClick={()=>{
+          localStorage.removeItem('user');
+          window.location.href='/login'
       }}>
-        <li style={{ color: 'orangered' }}>Logout</li>
+          <li style={{color:'orangered'}}>Logout</li>
       </Menu.Item>
     </Menu>
   );
   return (
     <div>
       <div className="header bs1">
-        <Row gutter={16} justify='center'>
-          <Col lg={20} sm={24} xs={24}>
-            <div className="d-flex justify-content-between">
-              <h1 ><b><Link to='/' style={{ color: 'orangered' }}>Cars2Go</Link></b></h1>
+          <Row gutter={16} justify='center'>
+              <Col lg={20} sm={24} xs={24}>
+              <div className="d-flex justify-content-between">
+             <h1 ><b><Link to='/' style={{color:'orangered'}}>Cars2Go</Link></b></h1>
 
-              <Dropdown overlay={menu} placement="bottomCenter">
-                <Button>{user.username}</Button>
-              </Dropdown>
-            </div>
-          </Col>
-        </Row>
-
+          <Dropdown overlay={menu} placement="bottomCenter">
+            <Button>{user.username}</Button>
+          </Dropdown>
+        </div>
+              </Col>
+          </Row>
+        
       </div>
       <div className="content">{props.children}</div>
 
-
+    
     </div>
   );
 }
