@@ -16,7 +16,7 @@ function App() {
           <Route path='/' element={<Home/>}/> 
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
-          <Route path='/booking/:carid' exact component={BookingCar} />
+          <Route exact path='/booking/:carid' element={<BookingCar/>} />
         </Routes>
       </BrowserRouter>      
     </div>
