@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
-function BookingCar({match}) {
+function BookingCar() {
   const params = useParams();
   const {carid} = params;  
   return (
