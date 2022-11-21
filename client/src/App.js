@@ -16,11 +16,9 @@ function App() {
           <Route path='/' element={<Home/>}/> 
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
-          <Route path='/bookingcar' element={<BookingCar/>} />
+          <Route path='/booking/:carid' exact component={BookingCar} />
         </Routes>
-      </BrowserRouter>
-
-      
+      </BrowserRouter>      
     </div>
   );
 }
