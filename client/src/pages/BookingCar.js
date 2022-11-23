@@ -7,6 +7,7 @@ import { getAllCars } from '../redux/actions/carsActions';
 import Spinner from '../components/Spinner';
 import moment from 'moment'
 const{RangePicker}= DatePicker;
+
 function BookingCar() {
   const user = JSON.parse(localStorage.getItem('user'));
   const {cars} = useSelector(state=>state.carsReducer)
@@ -17,12 +18,13 @@ function BookingCar() {
   const[to, setTo]=useState()
   const[totalHours , setTotalHours]=useState(0)
   
-  useEffect(() =>{
-      if(cars.length>0)
-      {dispatch(getAllCars())
-        setcar(cars.find(o=>o._id=carid))
-      }
-  } ,[])
+  useEffect(() => {
+    if (cars.length == 0) {
+      dispatch(getAllCars());
+    } else {
+      setcar(cars.find((o) => o._id == params.carid));
+    }
+  }, [cars]);
 
   function selectTimeSlots(values){
     setFrom(moment(values[0]).format('MM DD yyyy HH:mm'))
