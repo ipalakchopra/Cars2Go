@@ -1,4 +1,4 @@
-import {Col, Row, Divider, DatePicker, Checkbox} from 'antd'
+import {Col, Row, Divider, DatePicker, Checkbox, Modal} from 'antd'
 import React, { useState, useEffect } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout'
@@ -22,6 +22,7 @@ function BookingCar() {
   const[driver, setdriver] = useState(false)
   const [totalAmount, setTotalAmount] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  
 
   useEffect(() => {
     if (cars.length == 0) {
@@ -91,11 +92,13 @@ function BookingCar() {
           <Divider type="horizontal" dashed>
             Select Time Slots
           </Divider>
+
           <RangePicker
             showTime={{ format: "HH:mm" }}
             format="MMM DD yyyy HH:mm"
             onChange={selectTimeSlots}
           />
+          
           <br />
           <button
             className="btn1 mt-2"
@@ -139,6 +142,21 @@ function BookingCar() {
 
         
       </Row>
+      <Modal visible={showModal} closable={false} footer={false} title='Booked time slots'>
+        {car && (<div className='p-2'>
+
+            {car.bookedTimeSlots?.map(slot=>{
+              return <button className='btn1 mt-2'>{slot.from} - {slot.to}</button>
+            })}
+
+            <div className='text-right mt-5'>
+
+              <button className='btn1' onClick={()=>{setShowModal(false)}}>CLOSE</button>
+            </div>
+
+          </div>)}
+
+      </Modal>
     </DefaultLayout>
   );
 }

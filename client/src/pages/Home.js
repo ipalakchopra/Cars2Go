@@ -1,29 +1,84 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import DefaultLayout from '../components/DefaultLayout';
 import { getAllCars } from '../redux/actions/carsActions';
-import { Button, Row, Col} from 'antd';
+import {Col, Row, Divider, DatePicker, Checkbox} from 'antd'
 import {Link} from 'react-router-dom'; 
 import Spinner from '../components/Spinner';
+import moment from 'moment'
 
+const {RangePicker} = DatePicker
 
 function Home() {
   const user = JSON.parse(localStorage.getItem('user'));
 
   const {cars} = useSelector(state=>state.carsReducer)
   const {loading} = useSelector(state=>state.alertsReducer)
+  const [totalCars, setTotalcars] = useState([])
   const dispatch = useDispatch()
   
   useEffect(() =>{
       dispatch(getAllCars())
   } ,[dispatch])
+ 
+
+  useEffect(() =>{
+      setTotalcars(cars)  
+  } ,[cars])
+
+
+
+
+
+  function setFilter(values){
+
+    var selectedFrom = moment(values[0], 'MMM DD YYYY HH:MM')
+    var selectedTo = moment(values[1], 'MMM DD YYYY HH:MM')
+
+    var temp = []
+
+    for(var car of cars){
+      if(car.bookedTimeSlots.length == 0){
+        temp.push(car)
+      }
+      else{
+ 
+        for(var booking of car.bookedTimeSlots){
+
+          if(selectedFrom.isBetween(booking.from, booking.to) ||
+          selectedTo.isBetween(booking.from, booking.to) ||
+          moment(booking.from).isBetween(selectedFrom, selectedTo) ||
+          moment(booking.to).isBetween(selectedFrom, selectedTo)
+          )
+          {
+            
+          }
+          else{
+            temp.push(car)
+          }
+
+
+        }
+      }
+    }
+
+    setTotalcars(temp)
+
+  }
 
   return (
     <DefaultLayout>
+        <Row className='mt-3' justify='center'>
+          <Col lg = {20} sm = {24} className='d-flex justify-content-left'>
+            <RangePicker  showTime={{ format: "HH:mm" }}
+            format="MMM DD yyyy HH:mm" onChange={setFilter}/>
+          </Col>
+        </Row>
+
         {loading == true && (<Spinner/>)}
         <h1>{user.username}</h1>
-        <Row justify='center' gutter={16} className='mt-5'>
-          {cars.map(car=>{
+        <Row justify='center' gutter={16} >
+          {totalCars.map(car=>{
             return <Col lg={5} sm={24} xs={24}>
               <div className="car p-2 bs1">
                 <img src={car.image} className="carimg" alt="car"/>
