@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import BookingCar from './pages/BookingCar'
 import 'antd/dist/antd.min.css'
+import UserBookings from './pages/UserBookings';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/booking/:carid' element={<BookingCar/>} />
+          <Route path='/userbookings' element={<UserBookings/>} />
         </Routes>
       </BrowserRouter>      
     </div>
