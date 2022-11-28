@@ -8,34 +8,35 @@ A platform where user can browse through different cars with their specification
 To provide people with an easy-to-use platform so that they can rent a car of their choice instead of buying it. They will be able to go through the specifications and select the appropriate car based on their requirements. This platform is solely dedicated to renting of cars so it becomes convenient for people to use the platform.
 
 # Tech Stack
-MERN - MongoDB, Express.js, React.js, Node.js 
-Stripe - Payment Gateway 
-Antd - Ant Design (An enterprise-class UI design language and React UI library with a set of high-quality React components.)
+MERN - MongoDB, Express.js, React.js, Node.js <br />
+Stripe - Payment Gateway <br />
+Antd - Ant Design (An enterprise-class UI design language and React UI library with a set of high-quality React components.)<br />
 
 # Functionalities
-Login/Register
-Viewing car details
-Filter cars based on free slots available
-Book car for a desirable period of time (if slot is available)
-Stripe payment gateway
+Login/Register<br />
+Viewing car details<br />
+Filter cars based on free slots available<br />
+Book car for a desirable period of time (if slot is available)<br />
+Stripe payment gateway<br />
 
 # Members
-16010120008 - Palak Chopra
-16010120012 - Arvin Dias
-1911121 - Parthiv Shah
+16010120008 - Palak Chopra<br />
+16010120012 - Arvin Dias<br />
+1911121 - Parthiv Shah<br />
 
 # Future Scope
 Filter cars based on available slots. In future, we can expand this website to also work for bikes and other vehicles. Other functionlities which we can add are car repair facility, car servicing, providing drivers etc. 
 
 # Technologies Used
-node 16.16.0
-express 4.16.1
-mongoose
-react
-nodemon 2.0.20
-antd
-react-dom
-Stripe
+node 16.16.0<br />
+express 4.16.1<br />
+mongoose<br />
+react<br />
+nodemon 2.0.20<br />
+antd<br />
+react-dom<br />
+Stripe<br />
+
 
 
 # Getting Started with Create React App
