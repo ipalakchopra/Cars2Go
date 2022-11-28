@@ -19,12 +19,12 @@ function UserBookings() {
         <DefaultLayout>
         {loading && (<Spinner />)}
             <h3 className="text-center mt-2">My Bookings</h3>
-            
             <Row justify="center" gutter={16}>
                 <Col lg={16} sm={24}>
-                    {bookings.filter(o=>o.user==user._id).map((booking) => {
+                    {bookings.filter(o=>o.user==user[0]._id).map((booking) => {
                         return <Row className="bs1 mt-3 text-left">
                             <Col lg={6} sm={24}>
+                                
                                 <p><b>{booking.car.name}</b></p>
                                 <p>Total hours : <b>{booking.totalHours}</b></p>
                                 <p>Rent per hour : <b>{booking.car.rentPerHour}</b></p>

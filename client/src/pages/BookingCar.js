@@ -36,7 +36,7 @@ function BookingCar() {
   useEffect(() => {
     setTotalAmount(totalHours * car.rentPerHour);
     if (driver) {
-      setTotalAmount(totalHours * car.rentPerHour + 50 * totalHours);
+      setTotalAmount(totalHours * (car.rentPerHour + 50));
     }
   }, [driver, totalHours]);
 
@@ -56,7 +56,7 @@ function BookingCar() {
     const reqObj = {
       token,
       car: car._id,
-      user: JSON.parse(localStorage.getItem("user"))._id,
+      user: user[0]._id,
 
       bookedTimeSlots: {
         from,
@@ -86,7 +86,7 @@ function BookingCar() {
 
         <Col lg={10} sm={24} xs={24} className="text-right">
           <Divider type="horizontal" dashed>
-            Car Info
+            Car Info {user[0]._id}
           </Divider>
           <div style={{ textAlign: "right" }}>
             <p>{car.name}</p>
