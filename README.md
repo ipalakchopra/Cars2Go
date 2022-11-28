@@ -1,11 +1,11 @@
 # Title
-Title: Cars2Go - Car Rental Platform
+Cars2Go - Car Rental Platform
 
 # Problem Statement
-Problem Statement: A platform where user can browse through different cars with their specifications. The user can login to the platform and rent a car of their choice.
+A platform where user can browse through different cars with their specifications. The user can login to the platform and rent a car of their choice.
 
 # Motivation
-Motivation: To provide people with an easy-to-use platform so that they can rent a car of their choice instead of buying it. They will be able to go through the specifications and select the appropriate car based on their requirements. This platform is solely dedicated to renting of cars so it becomes convenient for people to use the platform.
+To provide people with an easy-to-use platform so that they can rent a car of their choice instead of buying it. They will be able to go through the specifications and select the appropriate car based on their requirements. This platform is solely dedicated to renting of cars so it becomes convenient for people to use the platform.
 
 # Tech Stack
 MERN - MongoDB, Express.js, React.js, Node.js 
