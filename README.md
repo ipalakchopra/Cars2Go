@@ -1,3 +1,43 @@
+# Title
+Title: Cars2Go - Car Rental Platform
+
+# Problem Statement
+Problem Statement: A platform where user can browse through different cars with their specifications. The user can login to the platform and rent a car of their choice.
+
+# Motivation
+Motivation: To provide people with an easy-to-use platform so that they can rent a car of their choice instead of buying it. They will be able to go through the specifications and select the appropriate car based on their requirements. This platform is solely dedicated to renting of cars so it becomes convenient for people to use the platform.
+
+# Tech Stack
+MERN - MongoDB, Express.js, React.js, Node.js 
+Stripe - Payment Gateway 
+Antd - Ant Design (An enterprise-class UI design language and React UI library with a set of high-quality React components.)
+
+# Functionalities
+Login/Register
+Viewing car details
+Filter cars based on free slots available
+Book car for a desirable period of time (if slot is available)
+Stripe payment gateway
+
+# Members
+16010120008 - Palak Chopra
+16010120012 - Arvin Dias
+1911121 - Parthiv Shah
+
+# Future Scope
+Filter cars based on available slots. In future, we can expand this website to also work for bikes and other vehicles. Other functionlities which we can add are car repair facility, car servicing, providing drivers etc. 
+
+# Technologies Used
+node 16.16.0
+express 4.16.1
+mongoose
+react
+nodemon 2.0.20
+antd
+react-dom
+Stripe
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +108,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+

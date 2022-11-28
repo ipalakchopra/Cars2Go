@@ -4,7 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: azure;
+  background-image: linear-gradient(360deg,#ffffff, #ffffff,#ffffff, #09116b);
 }
 
 code {
@@ -31,9 +31,9 @@ p{
 }
 .btn1{
   box-shadow: none !important;
-  background-color: white !important;
+  background-color: #ffffff !important;
   color: orangered !important;
-  border: 1px solid orangered !important;
+  border: 1px white !important;
   padding: 5px 15px !important;
   outline: none !important;
 }
