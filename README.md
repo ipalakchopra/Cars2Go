@@ -2,15 +2,19 @@
 Cars2Go - Car Rental Platform
 
 # Problem Statement
-A platform where user can browse through different cars with their specifications. The user can login to the platform and rent a car of their choice.
+In the present day buying a car has become really expensive for the common man, so a lot of people prefer to rent a car rathar than buing a new one because because of all the rensponsibilities that come along with it. So we are here to try to make life easier for our customers by porviding them a platform where they can rent their desired cars for however long they want for a cheaper pice than buying a new car. 
 
 # Motivation
 To provide people with an easy-to-use platform so that they can rent a car of their choice instead of buying it. They will be able to go through the specifications and select the appropriate car based on their requirements. This platform is solely dedicated to renting of cars so it becomes convenient for people to use the platform.
 
 # Tech Stack
-MERN - MongoDB, Express.js, React.js, Node.js <br />
+MERN - MongoDB Atlas(Compass), Express.js, React.js, Node.js <br />
 Stripe - Payment Gateway <br />
 Antd - Ant Design (An enterprise-class UI design language and React UI library with a set of high-quality React components.)<br />
+node 16.16.0<br />
+nodemon 2.0.20<br />
+antd<br />
+react-dom<br />
 
 # Functionalities
 Login/Register<br />
@@ -19,23 +23,17 @@ Filter cars based on free slots available<br />
 Book car for a desirable period of time (if slot is available)<br />
 Stripe payment gateway<br />
 
-# Members
-16010120008 - Palak Chopra<br />
-16010120012 - Arvin Dias<br />
-1911121 - Parthiv Shah<br />
 
 # Future Scope
 Filter cars based on available slots. In future, we can expand this website to also work for bikes and other vehicles. Other functionlities which we can add are car repair facility, car servicing, providing drivers etc. 
 
-# Technologies Used
-node 16.16.0<br />
-express 4.16.1<br />
-mongoose<br />
-react<br />
-nodemon 2.0.20<br />
-antd<br />
-react-dom<br />
-Stripe<br />
+
+This is a college Mini Project for MERN. 
+
+# Members
+16010120008 - Palak Chopra<br />
+16010120012 - Arvin Dias<br />
+1911121 - Parthiv Shah<br />
 
 
 
